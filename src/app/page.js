@@ -55,7 +55,9 @@ export default function Home() {
             errorMessage={checkElevenNumbers(value) ? 'Geçerli bir numara giriniz' : ''}
           />
           <Button size='lg' className=' text-white w-full uppercase   bg-inputColor ' isDisabled={checkDisable(value)}>
-            <Link href={'landingpage'}>Satın Al</Link>
+            <Link className='flex flex-col p-96 items-center justify-center  h-full  w-full' href={'landingpage'}>
+              Satın Al
+            </Link>
           </Button>{' '}
         </div>
         <p className='lg-px-12  text-xs'>
