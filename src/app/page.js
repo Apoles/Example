@@ -1,7 +1,38 @@
+'use client';
 import Image from 'next/image';
 import { Button, Input } from '@nextui-org/react';
+import Link from 'next/link';
+import React from 'react';
 
 export default function Home() {
+  const data = true;
+  const [value, setValue] = React.useState('');
+
+  const [firstValue, setfirstValue] = React.useState('(5__)___ __ __');
+
+  function checkElevenNumbers(inputString) {
+    let numbers = inputString.split(' ');
+    console.log(numbers);
+
+    for (let i = 0; i < numbers.length; i++) {
+      if ((numbers[i].length === 10 && /^\d+$/.test(numbers[i])) || numbers[i].length === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+  function checkDisable(inputString) {
+    let numbers = inputString.split(' ');
+    console.log(numbers);
+
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i].length === 10 && /^\d+$/.test(numbers[i])) {
+        return false;
+      }
+    }
+    return true;
+  }
+
   return (
     <main className='flex h-screen  flex-col items-center justify-center p-12	 bg-backgroundColorPink '>
       <div className=' w-full lg:w-1/4 bg-white px-12 py-12 rounded-md flex flex-col items-center justify-center  gap-6 '>
@@ -17,10 +48,14 @@ export default function Home() {
             variant={'bordered'}
             placeholder='(5__)___ __ __'
             size='md'
-            maxLength='11'
+            maxLength='10'
+            value={value}
+            onValueChange={setValue}
+            isInvalid={checkElevenNumbers(value)}
+            errorMessage={checkElevenNumbers(value) ? 'Geçerli bir numara giriniz' : ''}
           />
-          <Button size='lg' className=' text-white w-full uppercase   bg-inputColor '>
-            Satın Al
+          <Button size='lg' className=' text-white w-full uppercase   bg-inputColor ' isDisabled={checkDisable(value)}>
+            <Link href={'landingpage'}>Satın Al</Link>
           </Button>{' '}
         </div>
         <p className='lg-px-12  text-xs'>
