@@ -34,7 +34,7 @@ export default function Home() {
   }
 
   return (
-    <main className='flex h-screen  flex-col items-center justify-center p-12	 bg-backgroundColorPink '>
+    <main className=' bg-[url(/bg.png)] bg-no-repeat bg-cover   flex h-screen  flex-col items-center justify-center p-12'>
       <div className=' w-full lg:w-1/4 bg-white px-12 py-12 rounded-md flex flex-col items-center justify-center  gap-6 '>
         <div className='bg-white w-full flex flex-col items-center px-12 pt-4 pb-16 rounded-sm shadow-sm '>
           <Image className='' src={`/logot.png`} alt='logo' width='252' height='50' />

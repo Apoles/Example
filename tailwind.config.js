@@ -25,5 +25,6 @@ module.exports = {
       backgroundColorPink: '#4361EE',
     }),
   },
+
   plugins: [nextui()],
 };

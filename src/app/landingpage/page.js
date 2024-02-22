@@ -6,13 +6,13 @@ import { Button, Card, CardBody, CardHeader } from '@nextui-org/react';
 
 export default function Deneme() {
   return (
-    <main className='flex  flex-col items-center justify-between p-14 bg-backgroundColor   '>
-      <div className=' flex flex-col items-center  w-full lg:w-96 space-y-4 py-8 px-8 bg-white rounded-2xl shadow-xl '>
-        <h1 className='text-lg font-bold'>Sipariş Detayı</h1>
+    <main className='flex    flex-col items-center justify-between p-14    '>
+      <div className=' flex flex-col items-center   w-full lg:w-96 space-y-4 py-8 px-8 bg-white rounded-2xl shadow-md '>
+        <h1 className='text-2xl font-bold'>Sipariş Detayı</h1>
         <Cardz title='Üye İşyeri' description='Lorem İpsum'></Cardz>
         <Cardz title='Ürün Adı' description='Test Item'></Cardz>
         <Cardz title='Servis Adı' description='Lorem Ipsum'></Cardz>
-        <Cardz title='Toplam' description='₺1.44'></Cardz>
+        <Cardz title='Toplam' description='₺1.44' controlId={1}></Cardz>
         <div className='flex flex-col items-center justify-between gap-5 px-12  '>
           <h2 className='text-lg font-bold'>Lorem Ipsum</h2>
           <Card>

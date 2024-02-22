@@ -9,9 +9,9 @@ export const metadata = {
 export default function Deneme({ children }) {
   return (
     <>
-      <div className=''>
+      <div className='h-screen bg-backgroundColor  '>
         <MyNavbar></MyNavbar>
-        <main className=' flex flex-col  overflow-hidden bg-slate-900  w-full '>{children}</main>
+        <main className='  flex flex-col  overflow-hidden     '>{children}</main>
       </div>
     </>
   );
